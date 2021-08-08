@@ -1,0 +1,14 @@
+header{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+
+form{
+    display:flex;
+    justify-content: center;
+}
+
+

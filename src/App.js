@@ -1,17 +1,22 @@
 import React from 'react';
 import AddEdit from './AddEdit';
+import './style.css';
 
 function App() {
   return (
     <>
-    <AddEdit />
-    <button>Usuń Gist</button>      {/*akcja*/}
-    <button>Listuj Gisty</button>   {/*Paginacja*/}
-    <button>Filtruj Gisty</button>  {/*Paginacja-Filtrowanie*/}
-    {/*lista Gistów*/}
-    <form>
+      <header>
+        <h2>Gists Search</h2>
+      </header>
 
-    </form>
+      <AddEdit />
+      <button> Usuń Gist </button>      {/*akcja*/}
+      <button> Listuj Gisty </button>   {/*Paginacja*/}
+      <button> Filtruj Gisty </button>  {/*Paginacja-Filtrowanie*/}
+      {/*lista Gistów*/}
+      <form>
+
+      </form>
     </>
   )
 }
