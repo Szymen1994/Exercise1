@@ -1,14 +1,37 @@
-header{
+.form{
+    background-color: red;
+    position: absolute;
+    justify-content: center;
+    top: 15%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100px;
+}
+
+nav{
     background-color: bisque;
     display: flex;
     justify-content: center;
     padding: 20px;
     margin: auto;
+    top: 15%;
+
 }
 
-form{
-    display:flex;
-    justify-content: center;
+button{
+    background-color: grey;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
 }
 
-
+.buttons{
+    padding: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
