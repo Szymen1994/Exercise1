@@ -1,9 +1,4 @@
-import React, {Component} from 'react';
-import './style.css';
-import PersonList from './PersonList';
-
 const axios = require('axios');
-
 
 class Wrapper {
   constructor(token) {
@@ -18,6 +13,7 @@ class Wrapper {
     })
   }
 
+  //-----------------------FUNKCJE-----------------------
   // ----------------------REQUESTS----------------------
 
   getRequest(path) {
@@ -63,7 +59,7 @@ class Wrapper {
   }
 }
 
-let token = "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"
+let token = "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"
 let ghWrapper = new Wrapper(token)
 let gistCreatePayload = {
   "description": "byebye World Examples",
@@ -72,35 +68,42 @@ let gistCreatePayload = {
     "hello_world.rb": {
       "content": "class HelloWorld\n   def initialize(name)\n      @name = name.capitalize\n   end\n   def sayHi\n      puts \"Hello !\"\n   end\nend\n\nhello = HelloWorld.new(\"World\")\nhello.sayHi"
     },
+    "hello_world.py": {
+      "content": "class HelloWorld:\n\n    def __init__(self, name):\n        self.name = name.capitalize()\n       \n    def sayHi(self):\n        print \"Hello \" + self.name + \"!\"\n\nhello = HelloWorld(\"world\")\nhello.sayHi()"
+    },
   }
 }
 
-
-class App extends Component {
-  state = {
-    gisty: []
-  };
-
-  componentDidMount() {
-    ghWrapper.getGist('61e2d1e08b736ebb35fcc0731a74b8ad').then(response => {
-      this.setState({gisty: response.data});
-    });
+let gistUpdatePayload = {
+  "description": "Hello World Examples",
+  "files": {
+    "byebye_world.rb": {
+      "content": "Udało mi się zdalnie edytować gista!"
+    },
+    "hello_world.py": {
+      "content": "class HelloWorld:\n\n    def __init__(self, name):\n        self.name = name.capitalize()\n       \n    def sayHi(self):\n        print \"Hello \" + self.name + \"!\"\n\nhello = HelloWorld(\"world\")\nhello.sayHi()"
+    },
   }
-
-render() {
-  return (
-    <>
-    <div className="Dodawanie gista">
-      <input type="text" name="GistDescription"></input>
-      <input type="text" name="GistName"></input>
-      <input type="text" name="GistContent"></input>
-
-      <button name="dodajGist"></button>
-    </div>
-    </>
-  );
-  
-}
 }
 
-export default App;
+//-----------------------WYKONANIE FUNKCJI-----------------------
+
+//DODAWANIE
+//ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
+
+//EDYCJA
+//ghWrapper.updateGist('98c04d2758bb136ade0930ba63eb3abe', gistUpdatePayload).then((response) => console.log(response.data))
+
+//USUWANIE
+//ghWrapper.deleteGist('d1ce7d41ff792a4404bd23e2634a25ae').then((response) => console.log(response.data))
+
+//LISTING user GIST
+//ghWrapper.getGist('670ce001a54c826e460b19db41cdcfe6').then((response) => console.log(response.data))
+
+
+//LISTING ALL GISTS 
+ghWrapper.publicGist().then((response) => console.log(response.data))
+
+//ghWrapper.root().then((response) => console.log(response.data)) */
+
+export default Wrapper;
