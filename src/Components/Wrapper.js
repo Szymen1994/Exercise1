@@ -53,6 +53,10 @@ class Wrapper {
     return this.getRequest(`/gists/${gistId}`)
   }
 
+  getUserGist() {
+    return this.getRequest('/users/Szymen1994/gists')
+  }
+
   publicGist() {
     return this.getRequest('/gists/public')
   }

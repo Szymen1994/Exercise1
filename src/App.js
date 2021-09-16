@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './style.css';
-//import GistList from './Components/GistList';
+import GistList from './Components/GistList';
+import GistListPrivate from './Components/GistList_private';
 import PersonList from './Components/PersonList';
-//import Wrapper from './Components/Wrapper';
+import Wrapper from './Components/Wrapper';
+import AddGist from './Components/AddGist';
 //import Testy from './Components/Testy';
 
-//let token = "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"
-/*let ghWrapper = new Wrapper(token)
+let token = "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"
+let ghWrapper = new Wrapper(token)
+
 let gistCreatePayload = {
   "description": "byebye World Examples",
   "public": true,
@@ -16,8 +19,8 @@ let gistCreatePayload = {
     },
   }
 }
-*/
-class App extends Component {
+
+class App extends React.Component {
 render() {
   return (
     <>
@@ -25,11 +28,11 @@ render() {
       <input type="text" name="GistDescription"></input>
       <input type="text" name="GistName"></input>
       <input type="text" name="GistContent"></input>
-
-      <button name="dodajGist"></button>
+      
+      
+      
     </div>
-    <PersonList />
-
+    <GistListPrivate />
     </>
   );
   

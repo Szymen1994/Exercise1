@@ -9,7 +9,6 @@ export default class PersonList extends React.Component {
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then (res => {
-            console.log(res);
             this.setState({persons: res.data});
         });
     }
@@ -21,4 +20,5 @@ export default class PersonList extends React.Component {
             </ul>
         )
     }
+    
 }
