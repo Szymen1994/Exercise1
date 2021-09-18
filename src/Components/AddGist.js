@@ -1,64 +1,55 @@
-import React from 'react'
+import React from "react"
 import Wrapper from './Wrapper';
-/*
+
 let token = "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"
 let ghWrapper = new Wrapper(token)
 
-let gistCreatePayload = {
-  "description": "byebye World Examples",
-  "public": true,
-  "files": {
-    "hello_world.rb": {
-      "content": "class HelloWorld\n   def initialize(name)\n      @name = name.capitalize\n   end\n   def sayHi\n      puts \"Hello !\"\n   end\nend\n\nhello = HelloWorld.new(\"World\")\nhello.sayHi"
-    },
-  }
-}
-*/
-export default class AddGist extends React.Component {
-render(){
-
-    var Description = document.getElementById("description");
-      //var Title = document.getElementById("title")
-      var Content = document.getElementById("Content")
-
-    let gistUpdatePayload = {
-        "description": `${Description}`,
-        "files": {
-          "title": {
-            "content": `${Content}`
-          }
-        }
-      }
-      
-
-    return(
-        <form onSubmit={gistUpdatePayload}>
-            <input type="checkbox" className="description" id="description"></input>
-            {/*<input type="checkbox" className="Title" id="title"> </input> */}
-            <input type="checkbox" className="Content" value="content"> </input>
-            <input type="submit" value="send" />
-            <button> Dodaj Gist </button>
-            <button> Edytuj Gist </button>
-            <button> Usuń Gist </button>
-        </form>
-        )
+class NoweTesty extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { description: '', content: '' }
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
     }
-}
-/*
-
-
-  /*
   
-  let gistUpdatePayload = {
-    "description": "Hello World Examples",
-    "files": {
-      "byebye_world.rb": {
-        "content": "Udało mi się zdalnie edytować gista!"
-      },
-      "hello_world.py": {
-        "content": "class HelloWorld:\n\n    def __init__(self, name):\n        self.name = name.capitalize()\n       \n    def sayHi(self):\n        print \"Hello \" + self.name + \"!\"\n\nhello = HelloWorld(\"world\")\nhello.sayHi()"
-      },
+    handleChange(event) {
+      this.setState({
+        [event.target.name]: event.target.value,
+      });
+    }
+  
+    handleSubmit(event) {
+      let gistCreatePayload = {
+        "description": this.state.description,
+        "files": 
+        {
+          "title": 
+          {
+            "content": this.state.content
+          }
+        },
+      }
+
+      ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
+      event.preventDefault(); 
+    }
+  
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+            <label>
+              Description:
+            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+            
+           {/* <input type="text" value={this.state.title} onChange={this.handleChange} /> */}
+          </label>
+          <label>
+          Content:
+          <input type="text" name="content" value={this.state.content} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Dodaj" />
+        </form>
+      );
     }
   }
-
-  */
+export default NoweTesty;

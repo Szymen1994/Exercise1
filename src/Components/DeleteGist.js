@@ -19,7 +19,7 @@ class NoweTesty extends React.Component {
     }
   
     handleSubmit(event) {
-      let gistCreatePayload = {
+      let gistDeletePayload = {
         "description": this.state.description,
         "files": 
         {
@@ -30,7 +30,7 @@ class NoweTesty extends React.Component {
         }
       }
 
-      ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
+      ghWrapper.deleteGist({gistDeletePayload}).then((response) => console.log(response.data))
       event.preventDefault(); 
     }
   
@@ -38,14 +38,8 @@ class NoweTesty extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
             <label>
-              Description:
+              Podaj klucz gista:
             <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
-            
-           {/* <input type="text" value={this.state.title} onChange={this.handleChange} /> */}
-          </label>
-          <label>
-          Content:
-          <input type="text" name="content" value={this.state.content} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Wyślij" />
         </form>
