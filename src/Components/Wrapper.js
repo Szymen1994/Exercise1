@@ -53,14 +53,34 @@ class Wrapper {
     return this.getRequest(`/gists/${gistId}`)
   }
 
-  getUserGist() {
-    return this.getRequest('/users/Szymen1994/gists')
+  getUserGist(user) {
+    return this.getRequest(`/users/${user}/gists`)
   }
 
   publicGist() {
     return this.getRequest('/gists/public')
   }
 }
+
+//-----------------------WYKONANIE FUNKCJI-----------------------
+
+//DODAWANIE
+//ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
+
+//EDYCJA
+//ghWrapper.updateGist('98c04d2758bb136ade0930ba63eb3abe', gistUpdatePayload).then((response) => console.log(response.data))
+
+//USUWANIE
+//ghWrapper.deleteGist('d1ce7d41ff792a4404bd23e2634a25ae').then((response) => console.log(response.data))
+
+//LISTING user GIST
+//ghWrapper.getGist('940609d33b9008884fd37db63a22b23a').then((response) => console.log(response.data.files))
+
+
+//LISTING ALL GISTS 
+//ghWrapper.publicGist().then((response) => console.log(response.data))
+
+//ghWrapper.root().then((response) => console.log(response.data))
 
 
 export default Wrapper;
