@@ -1,8 +1,5 @@
 import React from "react"
-import Wrapper from './Wrapper';
-
-let token = "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"
-let ghWrapper = new Wrapper(token)
+import {ghWrapper} from './Wrapper';
 
 class AddGist extends React.Component {
     constructor(props) {
