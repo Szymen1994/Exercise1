@@ -4,7 +4,7 @@ import Wrapper from './Wrapper';
 let token = "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"
 let ghWrapper = new Wrapper(token)
 
-class NoweTesty extends React.Component {
+class AddGist extends React.Component {
     constructor(props) {
       super(props);
       this.state = { description: '', content: '' }
@@ -52,4 +52,4 @@ class NoweTesty extends React.Component {
       );
     }
   }
-export default NoweTesty;
+export default AddGist;

@@ -1,55 +1,63 @@
-import React from "react"
+import React from 'react'
 import Wrapper from './Wrapper';
 
 let token = "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"
 let ghWrapper = new Wrapper(token)
 
-class NoweTesty extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { description: '', content: '' }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({
-        [event.target.name]: event.target.value,
-      });
-    }
-  
-    handleSubmit(event) {
-      let gistCreatePayload = {
-        "description": this.state.description,
-        "files": 
-        {
-          "title": 
-          {
-            "content": this.state.content
-          }
-        }
-      }
+//Wyświetlanie gistów 
 
-      ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
-      event.preventDefault(); 
+export class GistList extends React.Component {
+    state = {
+        gisty: []
     }
-  
+
+    componentDidMount() {
+        ghWrapper.publicGist().then(response => {
+            console.log(response.data);
+        this.setState({gisty: response.data});
+        });
+    }
+        
     render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-            <label>
-              Description:
-            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
-            
-           {/* <input type="text" value={this.state.title} onChange={this.handleChange} /> */}
-          </label>
-          <label>
-          Content:
-          <input type="text" name="content" value={this.state.content} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Wyślij" />
-        </form>
-      );
+        return (
+            <div className="Gist_List">
+            <h2> Najnowsze Gisty</h2>
+            <ul>
+                {this.state.gisty.map( gist => 
+                <li key={gist.id}>Gist użytkownika: 
+                    <a href={gist.html_url}>{gist.owner.login}</a></li>)}
+            </ul>
+            </div>
+        )
     }
-  }
-export default NoweTesty;
+}
+
+export class GistListPrivate extends React.Component {
+    state = {
+        gisty: []
+    }
+
+    componentDidMount() {
+        ghWrapper.getUserGist('Szymen1994').then(response => {
+            console.log(response);
+        this.setState({gisty: response.data});
+        });
+        ghWrapper.deleteGist().then((response) => 
+        console.log(response.data))
+    }
+        
+    render() {
+        return (
+            <div className="Gist_List">
+            <h2>Lista moich gistów</h2>
+            <ul >
+                {this.state.gisty.map( gist => 
+                <li>Description: 
+                    <a href={gist.html_url}>{gist.description} </a>
+                </li>
+                )}
+            </ul>
+            </div>
+        )
+    }
+}

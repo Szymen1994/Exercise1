@@ -7,43 +7,32 @@ let ghWrapper = new Wrapper(token)
 class NoweTesty extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { description: '', content: '' }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({
-        [event.target.name]: event.target.value,
-      });
-    }
-  
-    handleSubmit(event) {
-      let gistDeletePayload = {
-        "description": this.state.description,
-        "files": 
-        {
-          "title": 
-          {
-            "content": this.state.content
-          }
-        }
+      this.state = {
+        data: [
+          {id:1, name: 'Hello'},
+          {id:2, name: 'World'},
+          {id:3, name: 'How'},
+          {id:4, name: 'Are'},
+          {id:5, name: 'You'},
+          {id:6, name: '?'}
+        ]
       }
+    }
 
-      ghWrapper.deleteGist({gistDeletePayload}).then((response) => console.log(response.data))
-      event.preventDefault(); 
+    delete(item){
+      const data = this.state.data.filter(i => i.id !== item.id)
+      this.setState({data})
     }
   
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-            <label>
-              Podaj klucz gista:
-            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Wyślij" />
-        </form>
-      );
+    render(){
+      const listItem = this.state.data.map((item)=>{
+          return <div key={item.id}>
+          <span>{item.name}</span> <button onClick={this.delete.bind(this, item)}>Delete</button>
+        </div>
+      })
+      return <div>
+          {listItem}
+      </div>
     }
-  }
+    }
 export default NoweTesty;
