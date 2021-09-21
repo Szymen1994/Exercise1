@@ -62,12 +62,6 @@ class Wrapper {
     return this.getRequest('/gists/public')
   }
 
-  delete(key){
-    ghWrapper.deleteGist(key).then(response => {
-      alert("Usunięto gist");
-    });
-    }
-
 }
 
 export let token = "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"

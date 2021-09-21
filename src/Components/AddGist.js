@@ -1,5 +1,6 @@
 import React from "react"
 import {ghWrapper} from './Wrapper';
+import './addGist.css';
 
 class AddGist extends React.Component {
     constructor(props) {
@@ -28,27 +29,34 @@ class AddGist extends React.Component {
 
       ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
       event.preventDefault(); 
+      alert("added gist " + gistCreatePayload.description)
     }
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Description:
-            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> 
-          </label>
-          
-          <label>
-            Content:
-            <input type="text" name="content" value={this.state.content} onChange={this.handleChange} />
-          </label>
+        <div className="box">
+          <h1> Dodaj nowy Gist</h1>
+          <form className="form" onSubmit={this.handleSubmit}>
 
-          <label>
-            Title:
-            <input type="text" name="filename" value={[this.state.filename]} onChange={this.handleChange} />
+            <label>
+              Description:
+              <input className="description" type="text" name="description" value={this.state.description} onChange={this.handleChange} /> 
             </label>
-          <input type="submit" value="Dodaj" />
-        </form>
+
+            <label>
+              Title:
+              <input className="filename" type="text" name="filename" value={[this.state.filename]} onChange={this.handleChange} />
+            </label>
+
+            <label>
+              Content:
+              <textarea rows="5" cols="60" className="content"  name="content" value={this.state.content} onChange={this.handleChange} />
+            </label>
+
+            <input className="submit" type="submit" value="Dodaj" />
+            
+          </form>
+        </div>
       );
     }
   }

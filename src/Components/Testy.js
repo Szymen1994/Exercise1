@@ -1,4 +1,3 @@
-import React from "react"
-import Wrapper from './Wrapper';
+//import React, {Component} from "react"
 
-
+//export default Testy

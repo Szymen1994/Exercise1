@@ -20,24 +20,20 @@ export class GistListPrivate extends React.Component {
         console.log(response.data))
         }
 
-      edit(key){
-        ghWrapper.getGist(key).then((response) => 
-        console.log(response.data))
-      }
       
       render() {
         return (
             <div className="Gist_List">
-            <h2> Moje Gisty</h2>
-            <ul>
-                {this.state.gisty.map( gist => 
-                <li key={gist.id}>
-                    Gist description:
-                    <a href={gist.html_url}>{gist.description || "[no description]"}</a>
-                    <button onClick={()=> this.delete(gist.id)}> usuń </button>
-                    <button onClick={() => this.edit(gist.id)}> Edytuj </button>
-                </li>)}
-            </ul>
+                <h2> Moje Gisty</h2>
+                <ul>
+                    {this.state.gisty.map( gist => 
+                    <li key={gist.id}>
+                        Gist description:
+                        <a href={gist.html_url}>{gist.description || "[no description]"}</a>
+                        <button onClick={()=> this.delete(gist.id)}> usuń </button>
+                        <button id="edit" onClick={() => this.edit(gist.id)}> Edytuj </button>
+                    </li>)}
+                </ul>
             </div>
         )
         

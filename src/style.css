@@ -1,13 +1,10 @@
-nav{
-    background-color: bisque;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin: auto;
-    top: 15%;
-
+body{
+  margin: 0;
+  padding: 0;
 }
-
+#edit{
+  background-color:rgb(62, 211, 124);
+}
 button{
     background-color: rgb(255, 109, 109);
     margin: 5px;
@@ -25,9 +22,15 @@ button{
   transform: translateX(-50%);
 }
 
+.dodaj{
+  background-color: aqua;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+}
+
 form{
-  display: inline;
-  background-color: aquamarine;
+  display: flex;
   width: 500px;
   height: 100px;
 }
