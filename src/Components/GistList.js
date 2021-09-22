@@ -16,8 +16,9 @@ export class GistListPrivate extends React.Component {
     }
 
     delete(key){
-        ghWrapper.deleteGist({key}).then((response) => 
-        console.log(response.data))
+        ghWrapper.deleteGist(key).then(response => {
+          alert("Usunięto gist");
+        });
         }
 
       
@@ -31,12 +32,11 @@ export class GistListPrivate extends React.Component {
                         Gist description:
                         <a href={gist.html_url}>{gist.description || "[no description]"}</a>
                         <button onClick={()=> this.delete(gist.id)}> usuń </button>
-                        <button id="edit" onClick={() => this.edit(gist.id)}> Edytuj </button>
+                        <button id="edit" onClick={() => console.log(gist.id)}> Edytuj </button>
                     </li>)}
                 </ul>
             </div>
         )
-        
     }
     
 }

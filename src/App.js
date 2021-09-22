@@ -2,7 +2,8 @@ import React from 'react';
 import AddGist from './Components/AddGist';
 import GistListPrivate from './Components/GistList';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from './Components/NavBar'
+import Navbar from './Components/NavBar';
+import Testy from './Components/Testy';
 
 class App extends React.Component {
 render() {
