@@ -14,14 +14,14 @@ body{
     width: 600px;
     padding:40px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #191919;
     text-align:center;
 }
 
-.description, .filename{
+.description, .filename, .content {
     background: none;
     color: #edf0f1;
     font-family: "Montserrat", sans-serif;
@@ -46,7 +46,26 @@ label{
     margin: 40px auto;
 }
 
-.description:focus, .filename:focus{
+.description:focus, .filename:focus, .content:focus{
     width: 480px;
     border-color: #2ecc71;
+}
+
+.submit{
+    border: 0;
+    background: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.submit:hover{
+    background:rgb(4, 179, 141);
 }

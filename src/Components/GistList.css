@@ -1,0 +1,60 @@
+.Gist_List{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    width: 600px;
+    padding:40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    background: #191919;
+}
+
+ul{
+    list-style:none;
+    margin: 0px;
+}
+
+li {
+    margin: 10px 0px;
+}
+
+a{
+    margin-right: 20px;
+}
+
+
+button{
+    border: 0;
+    background: none;
+    cursor: pointer;
+    margin-left: 15px;
+    text-align: center;
+    padding: 5px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.usun{
+    border: 2px solid #cc290c;
+}
+.edit{
+    border: 2px solid #ccbf0c;
+}
+
+.usun:hover{
+    background-color:rgb(255, 80, 80);
+}
+
+.edit:hover{
+    background-color:darkgoldenrod;
+}

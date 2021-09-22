@@ -1,7 +1,6 @@
 import React from 'react'
 import {ghWrapper} from './Wrapper';
-
-
+import './GistList.css';
 
 //Wyświetlanie gistów 
 export class GistListPrivate extends React.Component {
@@ -28,12 +27,13 @@ export class GistListPrivate extends React.Component {
                 <h2> Moje Gisty</h2>
                 <ul>
                     {this.state.gisty.map( gist => 
-                    <li key={gist.id}>
-                        Gist description:
-                        <a href={gist.html_url}>{gist.description || "[no description]"}</a>
-                        <button onClick={()=> this.delete(gist.id)}> usuń </button>
-                        <button id="edit" onClick={() => console.log(gist.id)}> Edytuj </button>
-                    </li>)}
+                    <li className="li" key={gist.id}>
+                        Gist description: 
+                        <a href={gist.html_url}> {gist.description || "[no description]"} </a>
+                        <button className="usun" onClick={()=> this.delete(gist.id)}> usuń </button>
+                        <button className="edit"  onClick={() => console.log(gist.id)}> Edytuj </button> 
+                    </li>
+                    )}
                 </ul>
             </div>
         )
