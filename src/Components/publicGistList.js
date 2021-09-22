@@ -1,45 +1,38 @@
 import React from 'react'
 import {ghWrapper} from './Wrapper';
-import { Link } from 'react-router-dom';
 import './GistList.css';
+import { Link } from 'react-router-dom';
 
 //Wyświetlanie gistów 
-export class GistListPrivate extends React.Component {
+export class PublicGistList extends React.Component {
     state = {
         gisty: []
     }
     componentDidMount() {
-        ghWrapper.getUserGist('Szymen1994').then(response => {
+        ghWrapper.publicGist().then(response => {
             console.log(response);
         this.setState({gisty: response.data});
         });
     }
-
-    delete(key){
-        ghWrapper.deleteGist(key).then(response => {
-          alert("Usunięto gist");
-        });
-        }
+    
       
       render() {
         return (
             <div className="Gist_List">
-                <h2> Moje Gisty</h2>
+                <h2> Publiczne</h2>
                 <ul>
                     {this.state.gisty.map( gist => 
                     <li className="li" key={gist.id}>
                         Gist description: 
                         <a href={gist.html_url}> {gist.description || "[no description]"} </a>
-                        <button className="usun" onClick={()=> this.delete(gist.id)}> usuń </button>
-                        <button className="edit"  onClick={() => console.log(gist.id)}> Edytuj </button> 
                     </li>
                     )}
                 </ul>
-                <Link to="/publicgistlist"> <button className="public"> Publiczne gisty </button></Link>
+                <Link to="/"> <button className="public"> My gist list </button></Link> 
             </div>
         )
     }
     
 }
 
-export default GistListPrivate
+export default PublicGistList

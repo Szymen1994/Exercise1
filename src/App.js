@@ -3,7 +3,7 @@ import AddGist from './Components/AddGist';
 import GistListPrivate from './Components/GistList';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from './Components/NavBar';
-import Testy from './Components/Testy';
+import PublicGistList from './Components/publicGistList';
 
 class App extends React.Component {
 render() {
@@ -16,8 +16,11 @@ render() {
             <Route exact path="/">
               <GistListPrivate />
             </Route>
-            <Route path="/addgist">
+            <Route exact path="/addgist">
               <AddGist />
+            </Route>
+            <Route exact path ="/publicgistlist">
+              <PublicGistList />
             </Route>
           </Switch>
         </div>

@@ -57,9 +57,10 @@ class Wrapper {
   getUserGist(user) {
     return this.getRequest(`/users/${user}/gists`)
   }
+  //?per_page=40&page=1
 
   publicGist() {
-    return this.getRequest('/gists/public')
+    return this.getRequest('/gists/public?per_page=3&page=1')
   }
 
 }

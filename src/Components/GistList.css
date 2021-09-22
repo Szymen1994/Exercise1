@@ -50,6 +50,12 @@ button{
 .edit{
     border: 2px solid #ccbf0c;
 }
+.public{
+    margin-top: 20px;
+    border: 2px solid rgb(0, 141, 141);
+    padding: 10px 20px;
+    
+}
 
 .usun:hover{
     background-color:rgb(255, 80, 80);
@@ -57,4 +63,8 @@ button{
 
 .edit:hover{
     background-color:darkgoldenrod;
+}
+
+.public:hover{
+    background-color:#1e3e44;
 }

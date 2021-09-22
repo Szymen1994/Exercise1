@@ -10,6 +10,7 @@ import './navBar.css';
                     <ul className="nav_links">
                         <li> <Link className="li" to="/"> <h2>GistList</h2> </Link> </li>
                         <li> <Link className="li" to="/addgist"> <h2>AddGist</h2> </Link> </li>
+
                     </ul>
                 </nav>
                 <p>Szymon Wójcik</p>
