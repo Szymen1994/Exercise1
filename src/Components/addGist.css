@@ -21,7 +21,7 @@ body{
     text-align:center;
 }
 
-.description, .filename, .content {
+.description, .filename, .content, .gistId{
     background: none;
     color: #edf0f1;
     font-family: "Montserrat", sans-serif;
@@ -46,7 +46,7 @@ label{
     margin: 40px auto;
 }
 
-.description:focus, .filename:focus, .content:focus{
+.description:focus, .filename:focus, .content:focus, .gistId:focus{
     width: 480px;
     border-color: #2ecc71;
 }

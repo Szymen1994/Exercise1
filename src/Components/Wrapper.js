@@ -12,7 +12,6 @@ class Wrapper {
       }
     })
   }
-
   
   // ----------------------REQUESTS----------------------
 
@@ -54,13 +53,13 @@ class Wrapper {
     return this.getRequest(`/gists/${gistId}`)
   }
 
-  getUserGist(user) {
-    return this.getRequest(`/users/${user}/gists`)
+  getUserGist(user, pageNumber, resultPerPage) {
+    return this.getRequest(`/users/${user}/gists?page=`+pageNumber+'&per_page='+resultPerPage)
   }
   //?per_page=40&page=1
 
-  publicGist() {
-    return this.getRequest('/gists/public?per_page=3&page=1')
+  publicGist(pageNumber, resultPerPage) {
+    return this.getRequest('/gists/public?page='+pageNumber+'&per_page='+resultPerPage)
   }
 
 }

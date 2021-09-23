@@ -2,7 +2,7 @@ import React from 'react'
   import {ghWrapper} from './Wrapper';
   import './GistList.css';
 
-export class Testy extends React.Component {
+export class EditGist extends React.Component {
   constructor(props) {
     super(props);
     this.state = { description: '', content: '', filename: '', gist: ''  }
@@ -12,7 +12,7 @@ export class Testy extends React.Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   }
 
@@ -39,6 +39,11 @@ export class Testy extends React.Component {
         <form className="form" onSubmit={this.handleSubmit}>
 
           <label>
+            Id Gista:
+            <input className="gistId" type="text" name="gistId" value={this.state.gistId} onChange={this.handleChange} />
+          </label>
+
+          <label>
             Description:
             <input className="description" type="text" name="description" value={this.state.description} onChange={this.handleChange} /> 
           </label>
@@ -53,11 +58,6 @@ export class Testy extends React.Component {
             <textarea rows="5" cols="60" className="content"  name="content" value={this.state.content} onChange={this.handleChange} />
           </label>
 
-          <label>
-            Id Gista:
-            <input className="gistId" type="text" name="gistId" value={this.state.gistId} onChange={this.handleChange} />
-          </label>
-
           <input className="submit" type="submit" value="Dodaj" />
           
         </form>
@@ -66,4 +66,4 @@ export class Testy extends React.Component {
   }
   }
 
-export default Testy
+export default EditGist

@@ -4,6 +4,7 @@ import GistListPrivate from './Components/GistList';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from './Components/NavBar';
 import PublicGistList from './Components/publicGistList';
+import EditGist from './Components/EditGist';
 
 class App extends React.Component {
 render() {
@@ -21,6 +22,9 @@ render() {
             </Route>
             <Route exact path ="/publicgistlist">
               <PublicGistList />
+            </Route>
+            <Route exact path ="/editgist">
+              <EditGist />
             </Route>
           </Switch>
         </div>
