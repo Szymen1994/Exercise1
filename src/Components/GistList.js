@@ -5,6 +5,7 @@ import './GistList.css';
 
 //Wyświetlanie gistów 
 export class GistListPrivate extends React.Component {
+    
     state = {
         gisty: [],
         pageNumber: 1,

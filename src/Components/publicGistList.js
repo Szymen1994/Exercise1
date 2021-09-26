@@ -14,7 +14,6 @@ export class PublicGistList extends React.Component {
         pageNumber: 1,
         resultPerPage: 8
     }
-    this.handleChange = this.handleChange.bind(this);
 }
 
     handleChange = (event) => {
