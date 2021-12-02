@@ -1,0 +1,118 @@
+body
+{
+    background-color: rgb(182, 181, 181); 
+    margin: -1% 10% 0 10%; 
+
+}
+
+
+
+h1
+{
+    text-align: center;
+    font-size: 32px;
+}
+
+h2
+{
+    font-size: 28px;
+}
+
+h3
+{
+    font-size: 24px;
+}
+
+h4
+{
+    font-size: 20px;
+}
+
+h5
+{
+    font-size: 16px;
+}
+
+h6
+{
+    font-size: 14px;
+}
+        /*HEADER*/
+header
+{
+    height: 600px;
+    width: 1000px;
+    background-image: url("tlo.jpg") ;
+    background-position: center center;
+    background-repeat: no-repeat;
+  /* Background image is absolute in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: absolute;
+  /* This is what makes the background image rescale based
+     on the container's size */
+     background-size: cover;
+     filter:brightness(110%) saturate(80%);
+     color:white;
+}
+p
+{
+    font-size: 16px;
+    color: gray;
+}
+
+.lewyGornyRog 
+{
+    float:left;
+    width: 42%;
+    padding: 10px 0 0 50px;
+}
+
+.prawyGornyRog
+{
+    padding: 10px 50px;
+    text-align: right;
+    float: right;
+    width: 42%;
+    word-spacing:10px;
+}
+
+.srodek
+{
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    width:100%;
+}
+
+.dol
+{
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width:100%;
+}
+
+.signUp
+{
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    width: 100%;
+}
+
+.text
+{
+    border-radius: 5px 0 0 5px;
+    color: grey;
+    width: 220px;
+    height: 40px;
+}
+
+.submit
+{
+    background-color: #51a200;
+    width: 130px;
+    height: 46px;
+    margin:0 -10px;
+    border-radius:0 5px 5px 0;
+}
