@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
 body
 {
     background-color: rgb(182, 181, 181); 
@@ -8,9 +9,9 @@ body
 h1
 {
     font-size: 32px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
 }
-
 h2
 {
     font-size: 32px;
@@ -36,39 +37,12 @@ h6
     font-size: 14px;
 }
 
-        /* NAV */
-nav{
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
-}
-nav ul{
-    display: flex;
-    flex-direction: row;
-}
-nav li{
-    align-items: center;
-    display: flex;
-    margin-left: 10px;
-    text-decoration: none;
-}
-nav a{
-    text-decoration: none;
+p
+{
     font-size: 16px;
-    font-family: sans-serif;
-    color: white;
+    color: #fff;
 }
-nav .right{
-    display: flex;
-    margin-left: auto;
-    margin-right: 60px;
-}
-nav p{
-    display: flex;
-    padding-left: 100px;
-    font-family: Aller;
-    font-size: 20px;
-}
+
         /*HEADER*/
 header
 {
@@ -82,37 +56,59 @@ header
     filter:brightness(110%) saturate(80%);
     color:white;
 }
-p
-{
-    font-size: 16px;
-    color: #fff;
-}
 
-.lewyGornyRog 
-{
-    float:left;
-    width: 42%;
-    padding: 10px 0 0 50px;
-}
+    /* NAV */
+    nav{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+        nav ul{
+            display: flex;
+            flex-direction: row;
+        }
+        nav li{
+            align-items: center;
+            display: flex;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        nav a{
+            text-decoration: none;
+            font-size: 16px;
+            font-family: sans-serif;
+            color: white;
+        }
+        nav .right{
+            display: flex;
+            margin-left: auto;
+            margin-right: 60px;
+        }
+        nav p{
+            display: flex;
+            padding-left: 100px;
+            font-family: Aller;
+            font-size: 20px;
+        }
+    .mid 
+    {
+        position: relative;
+        margin: auto;
+        top: 22%;
+        text-align:center;
+    }
+    .mid span{
+        font-weight:600;
+    }
+    .mid p{
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight:400;
+        line-height: 2px;
+        letter-spacing: 0.05em;
+    }
 
-.prawyGornyRog
-{
-    padding: 10px 50px;
-    text-align: right;
-    float: right;
-    width: 42%;
-    word-spacing:10px;
-}
-
-.srodek
-{
-    position: absolute;
-    text-align: center;
-    top: 35%;
-    width:100%;
-}
-
-.dol
+.bottom
 {
     position: absolute;
     text-align: center;
