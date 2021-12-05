@@ -15,11 +15,15 @@ h1
 h2
 {
     font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    color: #545454;
 }
 
 h3
 {
     font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: #545454;
 }
 
 h4
@@ -37,11 +41,7 @@ h6
     font-size: 14px;
 }
 
-p
-{
-    font-size: 16px;
-    color: #fff;
-}
+
 
         /*HEADER*/
 header
@@ -90,6 +90,7 @@ header
             font-family: Aller;
             font-size: 20px;
         }
+
     .mid 
     {
         position: relative;
@@ -108,49 +109,78 @@ header
         letter-spacing: 0.05em;
     }
 
-.bottom
-{
-    position: absolute;
-    text-align: center;
-    top: 72%;
-    width:100%;
-}
-.bottom p{
-    font-family: 'PT Serif', serif;
-    font-size: 14px;
+    .bottom
+    {
+        position: absolute;
+        text-align: center;
+        top: 72%;
+        width:100%;
+    }
+        .bottom p{
+            font-family: 'PT Serif', serif;
+            font-size: 14px;
+        }
+
+    .signUp
+    {
+        position: relative;
+        text-align: center;
+        top: 50%;
+        width: 350px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+        .text
+        {
+            border: none;
+            border-radius: 3px 0 0 3px;
+            color: grey;
+            width: 228px;
+            height: 38px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            margin-right: 10px;
+            padding-left: 20px
+        }
+
+        .submit
+        {
+            border: none;
+            background-color: #51a200;
+            cursor: pointer;
+            width: 130px;
+            height: 40px;
+            margin:0 -10px;
+            border-radius:0 5px 5px 0;
+        }
+
+article{
+    margin-top: -27px;;
+    background-color: white;
 }
 
-.signUp
-{
-    position: relative;
-    text-align: center;
-    top: 50%;
-    width: 350px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
+    .section1{
+        padding-top: 80px;
+        text-align: center;
+    }
+        .box{
+            display:flex;
+            flex-direction: row;
+            margin: 0 60px;
+            text-align: left;
+        }
+        .box p{
+            font-family: 'Open Sans', sans-serif;
+            color: #a2a2a2;
+            font-size: 16px;
+        }
+            .lewo{
+                width: 420px;
+            }
 
-.text
-{
-    border: none;
-    border-radius: 3px 0 0 3px;
-    color: grey;
-    width: 228px;
-    height: 38px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.submit
-{
-    border: none;
-    background-color: #51a200;
-    cursor: pointer;
-    width: 130px;
-    height: 40px;
-    margin:0 -10px;
-    border-radius:0 5px 5px 0;
-}
+            .prawo{
+                width: 420px;
+                margin-left: 50px;
+            }
