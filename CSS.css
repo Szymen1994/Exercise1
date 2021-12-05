@@ -121,7 +121,7 @@ header
             font-size: 14px;
         }
 
-    .signUp
+    header .signUp
     {
         position: relative;
         text-align: center;
@@ -134,11 +134,12 @@ header
 
         .text
         {
+            box-sizing: border-box;
             border: none;
             border-radius: 3px 0 0 3px;
             color: grey;
             width: 228px;
-            height: 38px;
+            height: 40px;
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
             margin-right: 10px;
@@ -175,12 +176,86 @@ article{
             font-family: 'Open Sans', sans-serif;
             color: #a2a2a2;
             font-size: 16px;
+            font-weight: 100;
         }
             .lewo{
-                width: 420px;
+                width: 400px;
             }
 
             .prawo{
-                width: 420px;
+                width: 400px;
                 margin-left: 50px;
             }
+            
+    .section2{
+        padding-top: 80px;
+        text-align: center;
+    }
+        .section2 .box p{
+            font-family: 'Open Sans', sans-serif;
+            color: #545454;
+            font-size: 16px;
+        }
+        .section2 .lewo{
+            width: 390px;
+        }
+
+        .section2 .prawo{
+            width: 400px;
+            margin-left: 50px;
+        }
+        .avatar-box{
+            display: flex;
+            flex-direction: row;
+        }
+        .avatar{
+            width: 50px;
+            margin-top:15px;
+            height: 50px;
+            border-radius: 50px;
+            padding-right: 5px;
+        }
+
+    .section3{
+        padding-top: 80px;
+        text-align: center;
+    }
+        .section3 p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            max-width: 467px;
+            margin:auto;
+            font-weight: 100;
+        }
+
+        .section3 .signUp{
+            position: relative;
+            text-align: center;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .section3 .text{
+            box-sizing: border-box;
+            border: solid 1px;
+            border-color: #51a200;
+        }
+
+        .section3 .submit{
+            height: 38px;
+        }
+
+.empty{
+    height: 50px;
+}
+
+footer{
+    text-align:center;
+}
+
+footer > p:first-of-type{
+    word-spacing: 8px;
+}
