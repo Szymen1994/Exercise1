@@ -114,35 +114,43 @@ header
     text-align: center;
     top: 72%;
     width:100%;
+}
+.bottom p{
     font-family: 'PT Serif', serif;
     font-size: 14px;
 }
 
 .signUp
 {
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: 80%;
+    top: 50%;
     width: 350px;
-    background-color:#51a200
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .text
 {
-    border:none;
+    border: none;
     border-radius: 3px 0 0 3px;
     color: grey;
     width: 228px;
-    height: 40px;
-    margin-left: auto;
+    height: 38px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-right: 10px;
+    text-align: center;
 }
 
 .submit
 {
     border: none;
     background-color: #51a200;
+    cursor: pointer;
     width: 130px;
-    height: 44px;
+    height: 40px;
     margin:0 -10px;
     border-radius:0 5px 5px 0;
 }
