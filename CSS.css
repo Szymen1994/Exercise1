@@ -1,21 +1,19 @@
 body
 {
     background-color: rgb(182, 181, 181); 
-    margin: -1% 10% 0 10%; 
-
+    width: 1000px; 
+    margin: auto;
 }
-
-
 
 h1
 {
-    text-align: center;
     font-size: 32px;
+    font-family: sans-serif;
 }
 
 h2
 {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 h3
@@ -37,6 +35,40 @@ h6
 {
     font-size: 14px;
 }
+
+        /* NAV */
+nav{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav li{
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+    text-decoration: none;
+}
+nav a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+}
+nav .right{
+    display: flex;
+    margin-left: auto;
+    margin-right: 60px;
+}
+nav p{
+    display: flex;
+    padding-left: 100px;
+    font-family: Aller;
+    font-size: 20px;
+}
         /*HEADER*/
 header
 {
@@ -45,19 +77,15 @@ header
     background-image: url("tlo.jpg") ;
     background-position: center center;
     background-repeat: no-repeat;
-  /* Background image is absolute in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-  background-attachment: absolute;
-  /* This is what makes the background image rescale based
-     on the container's size */
-     background-size: cover;
-     filter:brightness(110%) saturate(80%);
-     color:white;
+    background-attachment: absolute;
+    background-size: cover;
+    filter:brightness(110%) saturate(80%);
+    color:white;
 }
 p
 {
     font-size: 16px;
-    color: gray;
+    color: #fff;
 }
 
 .lewyGornyRog 
