@@ -26,6 +26,7 @@ class AddGist extends React.Component {
           }
         },
       }
+      
 
       ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
       event.preventDefault(); 

@@ -64,7 +64,7 @@ class Wrapper {
 
 }
 
-export let token = "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"
+export let token = "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"
 export let ghWrapper = new Wrapper(token)
 
 //-----------------------WYKONANIE FUNKCJI-----------------------
@@ -80,7 +80,6 @@ export let ghWrapper = new Wrapper(token)
 
 //LISTING user GIST
 //ghWrapper.getGist('940609d33b9008884fd37db63a22b23a').then((response) => console.log(response.data.files))
-
 
 //LISTING ALL GISTS 
 //ghWrapper.publicGist().then((response) => console.log(response.data))
