@@ -1,4 +1,5 @@
 .Gist_List{
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +45,7 @@ button{
     transition: 0.25s;
 }
 .paginacja{
+    border-radius: 10px;
     margin: 0px;
     width: 100vh;
     padding:10px;
