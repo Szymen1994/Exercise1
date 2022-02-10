@@ -15,4 +15,5 @@ tasks that the page had to fulfill were:
 
  I still want to modify website and let people add their github token to make website work for everyone, not just for me.
  
-![Gists_webpage_screen](/GistAppImage.png?raw=true "Gists webpage")
+ <img alt="Edit gist webpage screen" width="500px" src="/GistAppAddNewGist.png" /> <img alt="Add gist webpage screen" width="500px" src="/GistAppEditGist.png" />
+ <img alt="List gist webpage screen" width="500px" src="/GistAppMyGists.png" />
