@@ -39,7 +39,7 @@ export class PublicGistList extends React.Component {
         return (
         <>
             <div className="Gist_List">
-                <h2> Publiczne gisty</h2>
+                <h2> Public gists</h2>
                 <ul>
                     {this.state.gisty.map( gist => 
                     <li className="li" key={gist.id}>

@@ -64,7 +64,7 @@ class Wrapper {
 
 }
 
-export let token = "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"
+export let token = "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"
 export let ghWrapper = new Wrapper(token)
 
 //-----------------------WYKONANIE FUNKCJI-----------------------

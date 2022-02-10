@@ -30,13 +30,13 @@ class AddGist extends React.Component {
 
       ghWrapper.createGist(gistCreatePayload).then((response) => console.log(response.data))
       event.preventDefault(); 
-      alert("added gist " + gistCreatePayload.description)
+      alert("gist has been added " + gistCreatePayload.description)
     }
   
     render() {
       return (
         <div className="box">
-          <h1> Dodaj nowy Gist</h1>
+          <h1> Add new gist</h1>
           <form className="form" onSubmit={this.handleSubmit}>
 
             <label>

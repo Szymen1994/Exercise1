@@ -41,17 +41,17 @@ export class GistListPrivate extends React.Component {
         return (
             <>
             <div className="Gist_List">
-                <h2> Moje Gisty</h2>
+                <h2> My gists</h2>
                 <ul>
                     {this.state.gisty.map( gist => 
                     <li className="li" key={gist.id}>
                         Gist description: 
                         <a href={gist.html_url}> {gist.description || "[no description]"} </a>
-                        <button className="usun" onClick={()=> this.delete(gist.id)}> usuń </button> 
+                        <button className="usun" onClick={()=> this.delete(gist.id)}> delete </button> 
                     </li>
                     )}
                 </ul>
-                <Link to="/publicgistlist"> <button className="public"> Publiczne gisty </button></Link>
+                <Link to="/publicgistlist"> <button className="public"> Public gists </button></Link>
             </div>
 
             <div className="paginacja">

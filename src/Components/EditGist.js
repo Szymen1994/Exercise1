@@ -35,11 +35,11 @@ export class EditGist extends React.Component {
   render() {
     return (
       <div className="box">
-        <h1> Edytuj Gist</h1>
+        <h1> Edit Gist</h1>
         <form className="form" onSubmit={this.handleSubmit}>
 
           <label>
-            Id Gista:
+            Gist ID:
             <input className="gistId" type="text" name="gistId" value={this.state.gistId} onChange={this.handleChange} />
           </label>
 

@@ -14,7 +14,7 @@ import './navBar.css';
 
                     </ul>
                 </nav>
-                <p>Szymon Wójcik</p>
+                <p>Szymon Wojcik</p>
             </header>
         )
     }
