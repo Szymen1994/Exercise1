@@ -54,7 +54,7 @@ class AddGist extends React.Component {
               <textarea rows="5" cols="60" className="content"  name="content" value={this.state.content} onChange={this.handleChange} />
             </label>
 
-            <input className="submit" type="submit" value="Dodaj" />
+            <input className="submit" type="submit" value="Add" />
             
           </form>
         </div>
