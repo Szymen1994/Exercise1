@@ -41,7 +41,7 @@ class AddGist extends React.Component {
           <label>
             Description:
             <input
-              className="description"
+              className="description boxes"
               type="text"
               name="description"
               value={this.state.description}
@@ -52,7 +52,7 @@ class AddGist extends React.Component {
           <label>
             Title:
             <input
-              className="filename"
+              className="filename boxes"
               type="text"
               name="filename"
               value={[this.state.filename]}
@@ -65,7 +65,7 @@ class AddGist extends React.Component {
             <textarea
               rows="5"
               cols="60"
-              className="content"
+              className="content boxes"
               name="content"
               value={this.state.content}
               onChange={this.handleChange}
