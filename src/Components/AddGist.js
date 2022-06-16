@@ -1,6 +1,5 @@
 import React from "react";
 import { ghWrapper } from "./Wrapper";
-import "./addGist.css";
 
 class AddGist extends React.Component {
   constructor(props) {

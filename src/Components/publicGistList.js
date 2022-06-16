@@ -1,6 +1,5 @@
 import React from "react";
 import { ghWrapper } from "./Wrapper";
-import "./GistList.css";
 import { Link } from "react-router-dom";
 
 //Wyświetlanie gistów

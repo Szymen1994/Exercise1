@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2c4966;
+  font-family: "Montserrat", sans-serif;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+/* --- NAV BAR SECTION --- */
+
+header {
+  align-items: center;
+  background-color: #24252a;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 10%;
+}
+
+header a,
+header p,
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+ul li a {
+  transition: all 0.3s ease 0s;
+}
+
+ul li a:hover {
+  color: #0088a9;
+}
+
+@media only screen and (max-width: 500px) {
+  header .li,
+  header li,
+  header p,
+  header h1 {
+    font-size: 0.5rem;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  ul li {
+    padding: 0 5px;
+  }
+
+  a {
+    margin-right: 0;
+  }
+
+  nav h2 {
+    margin: 0;
+  }
+
+  header {
+    padding: 0 1%;
+  }
+}
+
+/* --- ADD GIST SECTION, EDIT GIST --- */
+
+.box {
+  border-radius: 20px;
+  width: 600px;
+  padding: 0px 20px;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+}
+
+.boxes {
+  background: none;
+  color: #edf0f1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  width: clamp(200px, 70vw, 500px);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 30px auto;
+}
+
+.boxes:focus {
+  width: clamp(220px, 80vw, 550px);
+  border-color: #2ecc71;
+}
+
+.submit {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.submit:hover {
+  background: rgb(4, 179, 141);
+}
+
+@media only screen and (max-width: 500px) {
+  .box {
+    position: relative;
+    margin: 20px auto 0;
+    transform: translate(0, 0);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 10px 0;
+    border-radius: 0;
+  }
+  label {
+    margin: 20px auto;
+  }
+}
+
+/* --- 
+GIST LIST, PAGINATION, PUBLIC GIST SECTION 
+--- */
+
+.Gist_List {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: clamp(320px, 80%, 650px);
+  padding-bottom: 1rem;
+  text-align: center;
+  background: #191919;
+  margin: 4% auto 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+}
+
+li {
+  margin: 10px 0px;
+}
+
+a {
+  margin-right: 20px;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.paginacja {
+  border-radius: 20px;
+  margin: 10px auto;
+  width: clamp(300px, 90%, 800px);
+  padding: 10px;
+  position: relative;
+  background: #191919;
+  text-align: center;
+}
+
+.paginacja button {
+  margin: 0 1px;
+  padding: 0 5px;
+}
+
+.usun {
+  border: 2px solid #cc290c;
+}
+.edit {
+  border: 2px solid #ccbf0c;
+}
+.public {
+  margin-top: 20px;
+  border: 2px solid rgb(0, 141, 141);
+  padding: 10px 20px;
+}
+
+.usun:hover {
+  background-color: rgb(255, 80, 80);
+}
+
+.edit:hover {
+  background-color: darkgoldenrod;
+}
+
+.public:hover {
+  background-color: #1e3e44;
+}
+
+@media only screen and (max-width: 500px) {
+  .Gist_List {
+    margin: 6% auto 0;
+  }
+}

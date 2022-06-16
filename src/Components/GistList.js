@@ -1,7 +1,6 @@
 import React from "react";
 import { ghWrapper } from "./Wrapper";
 import { Link } from "react-router-dom";
-import "./GistList.css";
 
 //Wyświetlanie gistów
 export class GistListPrivate extends React.Component {
