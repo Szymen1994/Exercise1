@@ -44,9 +44,3 @@ form {
 .Gist_List h2 {
   left: 50%;
 }
-
-@media only screen and(max-width: 350px) {
-  body {
-    font-size: 10px;
-  }
-}

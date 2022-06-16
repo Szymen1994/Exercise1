@@ -37,7 +37,7 @@ ul li a:hover {
   color: #0088a9;
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 500px) {
   header .li,
   header li,
   header p,
