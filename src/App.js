@@ -1,36 +1,37 @@
-import React from 'react';
-import AddGist from './Components/AddGist';
-import GistListPrivate from './Components/GistList';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from './Components/NavBar';
-import PublicGistList from './Components/publicGistList';
-import EditGist from './Components/EditGist';
+import React from "react";
+import AddGist from "./Components/AddGist";
+import GistListPrivate from "./Components/GistList";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Components/NavBar";
+import PublicGistList from "./Components/publicGistList";
+import EditGist from "./Components/EditGist";
 
 class App extends React.Component {
-render() {
-  return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="Content">
-          <Switch>
-            <Route exact path="/">
-              <GistListPrivate />
-            </Route>
-            <Route exact path="/addgist">
-              <AddGist />
-            </Route>
-            <Route exact path ="/publicgistlist">
-              <PublicGistList />
-            </Route>
-            <Route exact path ="/editgist">
-              <EditGist />
-            </Route>
-          </Switch>
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="Content">
+            <Switch>
+              <Route exact path="/">
+                <GistListPrivate />
+              </Route>
+              <Route exact path="/addgist">
+                <AddGist />
+              </Route>
+              <Route exact path="/publicgistlist">
+                <PublicGistList />
+              </Route>
+              <Route exact path="/editgist">
+                <EditGist />
+              </Route>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
-  ); 
-}}
+      </Router>
+    );
+  }
+}
 
 export default App;
